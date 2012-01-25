@@ -1,6 +1,5 @@
-var Tiddlers = {}; // an "export"
+var Tiddlers = $(function() {
 
-$(function() {
     var urlFromBag = function(bag) {
         var index = bag.indexOf('_public');
         var space = '';
@@ -27,7 +26,7 @@ $(function() {
             )).toISOString();
     };
 
-    Tiddlers = function(el, socketuri, sourceuri, updater, options) {
+    var Tiddlers = function(el, socketuri, sourceuri, updater, options) {
         this.el = el;
         this.source = sourceuri + ';sort=modified';
         this.updater = updater;
@@ -130,4 +129,6 @@ $(function() {
         }
 
     });
+
+    return Tiddlers;
 });
