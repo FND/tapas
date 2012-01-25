@@ -1,7 +1,7 @@
 /*jslint vars: true */
 /*global jQuery, io */
 
-var Tiddlers = jQuery(function($) {
+var Tiddlers = (function($) {
 
     "use strict";
 
@@ -136,4 +136,4 @@ var Tiddlers = jQuery(function($) {
     });
 
     return Tiddlers;
-});
+}(jQuery));
