@@ -1,4 +1,9 @@
-var Tiddlers = $(function() {
+/*jslint vars: true */
+/*global jQuery, io */
+
+var Tiddlers = jQuery(function($) {
+
+    "use strict";
 
     var urlFromBag = function(bag) {
         var index = bag.indexOf('_public');
@@ -35,7 +40,7 @@ var Tiddlers = $(function() {
         } else {
             this.sizer = function() {
                 return 6; // if no sizer, so show 5 things
-            }
+            };
         }
         if (typeof(io) !== 'undefined') {
             this.socket = io.connect(socketuri,
